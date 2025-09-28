@@ -1,0 +1,51 @@
+Quries:-
+
+Preview Table-
+   use world;
+   show tables;
+   select * from sales limit 10;
+
+Count Table-
+   select COUNT(*) from sales;
+
+Describe Sales-
+   describe sales;
+
+Total Revenue-
+   SELECT SUM(Price * Quantity) AS total_revenue
+   FROM sales;
+
+Revenue by product-
+   SELECT Product, SUM(Price * Quantity) AS revenue
+   FROM sales
+   GROUP BY Product
+   ORDER BY revenue DESC;
+
+Revenue by city-
+   SELECT City, SUM(Price * Quantity) AS revenue
+   FROM sales
+   GROUP BY City
+   ORDER BY revenue DESC;
+
+Revenue by manager-
+   SELECT Manager, SUM(Price * Quantity) AS revenue
+   FROM sales
+   GROUP BY Manager
+   ORDER BY revenue DESC;
+
+Revenue by purchase type-
+   SELECT `Purchase Type`, SUM(Price * Quantity) AS revenue
+   FROM sales
+   GROUP BY `Purchase Type`;
+
+Revenue by payment method
+   SELECT `Payment Method`, SUM(Price * Quantity) AS revenue
+   FROM sales
+   GROUP BY `Payment Method`
+   ORDER BY revenue DESC;
+
+Daily sales trend-
+   SELECT Date, SUM(Price * Quantity) AS daily_revenue
+   FROM sales
+   GROUP BY Date
+   ORDER BY STR_TO_DATE(Date, '%d/%m/%Y');
