@@ -18,8 +18,8 @@ The dataset contains details about orders, products, prices, quantities, purchas
 - Daily sales trend
 
 ## Insights:-
-- Top-selling product: Burgers 🍔
-- Highest revenue city: Berlin 🇩🇪
-- Most common payment method: Credit Card 💳
+- Top-selling product: Burgers 
+- Highest revenue city: Berlin 
+- Most common payment method: Credit Card 
 
 
